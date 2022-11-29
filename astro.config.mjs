@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
@@ -6,5 +7,7 @@ export default defineConfig({
     // Can be 'shiki' (default), 'prism' or false to disable highlighting
     syntaxHighlight: false,
   },
-  integrations: [],
+  integrations: [mdx({
+    drafts: false,
+  })],
 });

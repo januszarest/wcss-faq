@@ -1,0 +1,40 @@
+---
+layout: '../layouts/Layout.astro'
+title: Migracja poczty WCSS
+---
+
+## Migracja poczty WCSS
+
+WCSS rozpoczyna zmianę oprogramowania pocztowego. Proces zmian podyktowany jest faktem, że dotychczasowy system nie jest wspierany, nie można go rozbudowywać i dostosować do oczekiwań użytkowników. Konieczna jest również wymiana sprzętu na którym zainstalowane jest oprogramowanie. Pragniemy wykorzystać nowe technologie sprzętowe, które zostały przez WCSS zakupione. Docelowo będzie to wymagało przeniesienia zasobów pocztowych na nowe serwery, w nowe środowisko. Proces migracji będzie długotrwały i skierowany do pojedynczych użytkowników po wcześniejszym ustaleniu terminu migracji.
+
+> W dalszym ciągu system pocztowy będzie usługą zamkniętą na serwerach WCSS.
+
+Poczta będzie podlegała wewnętrznej kontroli antyspamowej i antywirusowej, wiadomości będą przechowywane na zasobach WCSS. Dane nie będą przetwarzane przez podmioty zewnętrzne.
+
+> UWAGA:
+> W nowym systemie wiadomości w folderze spam starsze niż 14 dni będą usuwane.
+
+**Poza podstawowymi zasadami obsługi poczty użytkownicy uzyskają możliwość:**
+
+- podpisywania certyfikatem personalnym wiadomości redagowanych w webmailu;
+- szyfrowania certyfikatem odbiorcy wiadomości wysyłanych z webmaila;
+- dołączania dużych plików z poziomu interfejsu webowego bez konieczności korzystania z tzw. kangura;
+- ustawienia dwuetapowej weryfikacji logowania do konta w webmailu;
+- tworzenia własnej białej i czarnej listy;
+- odzyskania przez użytkownika wiadomości skasowanych w przeciągu ostatnich 7 dni;
+- automatycznego dodawania odbiorców do książki adresowej;
+- cofnięcia wysłania wiadomości w ciągu 5 sekund.
+
+[Kliknij aby zobaczyć najczęściej zadawane pytania](/faq)
+
+**Dodatkowo dostępne będą następujące funkcjonalności:**
+
+- webchat
+- teamchat
+- kalendarz
+- książkę adresową
+- powiązanie z dokumentami i plikami
+- tworzenie zadań
+- tworzenie notatek
+
+Nazwy folderów i ich struktura zostają zachowane zgodnie z aktualnym systemem poczty w WCSS.

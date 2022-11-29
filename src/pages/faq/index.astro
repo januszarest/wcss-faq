@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const items = await Astro.glob("./*.md");
+---
+
+<Layout title="FAQ - Pytania i odpowiedzi">
+  <h2>FAQ - Pytania i odpowiedzi</h2>
+
+  <div class="d-flex flex-row justify-content-between flex-wrap">
+    <div class="">
+      <ol>
+        {
+          items.map((item) => <li><a href={item.frontmatter.url}>{item.frontmatter.title}</a></li>)
+        }
+      </ol>
+    </div>
+    <div class="ml-auto mx-3">
+      <p><b>Serwer poczty:</b><br />poczta.wcss.pl</p>
+      <p>
+        <b>Porty usług:</b><br />
+        IMAP 993<br />
+        POP 995<br />
+        SMTP 465<br />
+        SSL
+      </p>
+      <p><b>Logowanie:</b><br />nazwa_uzytkownika@domena</p>
+    </div>
+  </div>
+</Layout>

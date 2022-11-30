@@ -1,8 +1,4 @@
 ---
-export interface Props {
-  title: string;
-}
-
 const { title } = Astro.props.frontmatter || Astro.props || { title: "?" };
 const { url } = Astro.props.frontmatter || { url: Astro.url.pathname } || {
     url: "/",
@@ -24,6 +20,10 @@ const backToMain = url.length > 1 && !backToFaq;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -54,7 +54,7 @@ const backToMain = url.length > 1 && !backToFaq;
             class="d-inline-block align-text-top"
           />
         </a>
-        <button
+        <button 
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -63,7 +63,7 @@ const backToMain = url.length > 1 && !backToFaq;
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa fa-bars text-primary"></i>
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
           <ul class="navbar-nav m-0">
@@ -80,6 +80,7 @@ const backToMain = url.length > 1 && !backToFaq;
             </li>
             <li class="nav-item">
               <a class={nav_class("/contact")} href="/contact">Kontakt</a>
+
             </li>
           </ul>
         </div>
@@ -89,20 +90,22 @@ const backToMain = url.length > 1 && !backToFaq;
       <!-- Astro Markdown -->
       <slot />
 
-      <div class="back-to">
-        {
-          backToFaq ? (
-            <a href="/faq/" class="btn btn-primary btn-sm">
-              <i class="fa fa-arrow-left" /> Wróć do FAQ
-            </a>
-          ) : backToMain ? (
-            <a href="/" class="btn btn-primary btn-sm">
-              <i class="fa fa-arrow-left" /> Wróć do strony głównej
-            </a>
-          ) : (
-            ""
-          )
-        }
+      <div class="section-page-prev-next">
+        <div class="back-to">
+          {
+            backToFaq ? (
+              <a href="/faq/" class="">
+                <i class="" /> Wróć do FAQ
+              </a>
+            ) : backToMain ? (
+              <a href="/" class="">
+                <i class="" /> Wróć do strony głównej
+              </a>
+            ) : (
+              ""
+            )
+          }
+        </div>
       </div>
     </div>
   </body>
